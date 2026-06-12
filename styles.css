@@ -19,10 +19,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background:
     radial-gradient(circle at 16px 16px, rgba(31, 138, 135, 0.10) 2px, transparent 3px) 0 0 / 34px 34px,
     var(--paper);
@@ -1698,6 +1700,64 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .impact-preview {
+    width: min(100% - 16px, 1160px);
+    min-height: 820px;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 38px 10px;
+    overflow: hidden;
+  }
+
+  .impact-preview-copy {
+    max-width: none;
+    margin: 0 10px;
+    padding: 22px 20px;
+    box-sizing: border-box;
+    background: rgba(255, 250, 241, 0.9);
+  }
+
+  .impact-preview-copy h2 {
+    font-size: clamp(32px, 10vw, 40px);
+    line-height: 1.04;
+  }
+
+  .impact-preview-copy p:not(.eyebrow) {
+    font-size: 17px;
+    line-height: 1.35;
+    margin-top: 16px;
+  }
+
+  .impact-preview .button {
+    margin: 24px 10px 0;
+  }
+
+  .impact-collage {
+    inset: 0;
+    z-index: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: none;
+    grid-auto-rows: 112px;
+    opacity: 0.66;
+  }
+
+  .impact-collage img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .donate-flower-two {
+    display: none;
+  }
+
+  .donate-flower-one {
+    right: -190px;
+    bottom: 120px;
+    width: 310px;
+    opacity: 0.72;
+  }
+
   .slideshow-track img {
     height: 330px;
   }
@@ -1739,9 +1799,27 @@ p {
 
   .moments-strip img,
   .moments-strip img:nth-child(2),
+  .moments-strip img:nth-child(3),
   .moments-strip img:nth-child(4) {
-    height: 260px;
+    height: clamp(330px, 82vw, 390px);
     margin-top: 0;
+    object-fit: cover;
+    object-position: center top;
+    background: rgba(255, 255, 255, 0.72);
+  }
+
+  .moments-strip img:first-child {
+    height: 260px;
+    object-fit: cover;
+    object-position: center bottom;
+  }
+
+  .moments-strip img:nth-child(2) {
+    object-position: center 82%;
+  }
+
+  .moments-strip img:nth-child(3) {
+    object-position: center 42%;
   }
 
   .site-footer {
