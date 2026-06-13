@@ -1757,62 +1757,16 @@ p {
   .impact-collage {
     inset: 0;
     z-index: 0;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: none;
-    grid-auto-rows: 154px;
-    opacity: 0.72;
+    display: block;
+    background-image: url("assets/impact-collage-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.82;
   }
 
   .impact-collage img {
-    object-fit: cover;
-    object-position: center 42%;
-  }
-
-  .impact-collage img:nth-child(1),
-  .impact-collage img:nth-child(5),
-  .impact-collage img:nth-child(7),
-  .impact-collage img:nth-child(9),
-  .impact-collage img:nth-child(20),
-  .impact-collage img:nth-child(25),
-  .impact-collage img:nth-child(27),
-  .impact-collage img:nth-child(29),
-  .impact-collage img:nth-child(30),
-  .impact-collage img:nth-child(31),
-  .impact-collage img:nth-child(32) {
-    object-position: center center;
-  }
-
-  .impact-collage img:nth-child(2),
-  .impact-collage img:nth-child(4),
-  .impact-collage img:nth-child(6),
-  .impact-collage img:nth-child(10),
-  .impact-collage img:nth-child(12),
-  .impact-collage img:nth-child(13),
-  .impact-collage img:nth-child(14),
-  .impact-collage img:nth-child(15),
-  .impact-collage img:nth-child(16),
-  .impact-collage img:nth-child(17),
-  .impact-collage img:nth-child(18),
-  .impact-collage img:nth-child(19),
-  .impact-collage img:nth-child(21),
-  .impact-collage img:nth-child(22),
-  .impact-collage img:nth-child(23),
-  .impact-collage img:nth-child(24),
-  .impact-collage img:nth-child(26) {
-    object-position: center 34%;
-  }
-
-  .impact-collage img:nth-child(3) {
-    object-position: center 22%;
-  }
-
-  .impact-collage img:nth-child(8) {
-    object-position: center 45%;
-  }
-
-  .impact-collage img:nth-child(11),
-  .impact-collage img:nth-child(28) {
-    object-position: center 58%;
+    display: none;
   }
 
   .donate-flower-two {
